@@ -33,17 +33,16 @@ const Directories = ()=>{
     isPath()
   }, [params])
 
-  const style = "text-lg px-20 py-2 border-2 border-gray-400 rounded-md mb-3 flex lg:flex-row dark:text-white dark:border-gray-500 dark:bg-gray-900"
+  const style = "text-lg px-20 py-2 border-2 border-gray-400 rounded-md mb-3 flex row-start-2 lg:flex-row dark:text-white dark:border-gray-500 dark:bg-gray-900"
 
   return (
-    <main className="flex flex-col justify-center items-center" >
+    <main className="grid grid-cols-5 grid-rows-5 place-items-stretch gap-3" >
       <OpenModal 
         buttonName="Make Directory" 
         buttonStyle="mb-3 px-20 py-2 border-2 border-emerald-500 rounded-md text-2xl bg-emerald-500 xl:bg-transparent hover:bg-emerald-500 dark:text-white" 
       >
         <MakeDirectory />
       </OpenModal>
-      <div className="flex xl:flex-row flex-col gap-4" >
         {
           directories.map((directory, index) => (
             <div className={style} key={index}>
@@ -51,8 +50,6 @@ const Directories = ()=>{
             </div>
           ))
         }
-      </div>
-      <div className="flex xl:flex-row flex-col gap-4">
         {
           files.map((file, index)=> (
             <div className={style} key={index} >
@@ -61,7 +58,6 @@ const Directories = ()=>{
             </div>
           ))
         }
-      </div>
     </main>
   )
 }
