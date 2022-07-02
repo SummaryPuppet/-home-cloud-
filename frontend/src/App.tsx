@@ -6,8 +6,8 @@ import {
   Navigate,
 } from 'react-router-dom'
 
-import Directories from './components/Directories/Directories'
-import HeaderMenu from './components/HeaderMenu/HeaderMenu'
+import Directories from './components/Directories'
+import HeaderMenu from './components/HeaderMenu'
 import Login from './components/Forms/Login'
 
 function App() {
