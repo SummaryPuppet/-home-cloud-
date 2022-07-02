@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react"
 import {useParams} from "react-router-dom"
 
-import api from "../api/api"
+import api from "./api/api"
 
-import Directory from "../Directory/Directory"
-import DropdownMenu from "../DropdownMenu/DropdownMenu"
-import OpenModal from "../OpenModal/OpenModal"
-import MakeDirectory from "../MakeDirectory/MakeDirectory"
+import Directory from "./Directory"
+import DropdownMenu from "./DropdownMenu"
+import OpenModal from "./OpenModal"
+import MakeDirectory from "./MakeDirectory"
 
 const Directories = ()=>{
   const [directories, setDirectories] = useState([])

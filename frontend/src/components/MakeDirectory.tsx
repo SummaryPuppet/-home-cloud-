@@ -1,9 +1,9 @@
 import {useState} from "react"
 import {useNavigate, useParams} from "react-router-dom"
 
-import api from "../api/api"
-import isExits from "../isExists"
-import Warning from "../Warning"
+import api from "./api/api"
+import isExits from "./isExists"
+import Warning from "./Warning"
 
 const MakeDirectory = ()=>{
   const [name, setName] = useState("")

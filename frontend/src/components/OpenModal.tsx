@@ -1,6 +1,5 @@
 import {useState} from "react"
 
-
 const OpenModal = (props: any)=>{
   const [open, setOpen] = useState(false)
 

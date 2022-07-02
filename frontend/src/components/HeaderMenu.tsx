@@ -1,7 +1,7 @@
-import OpenModal from "../OpenModal/OpenModal"
+import OpenModal from "./OpenModal"
 
-import Navbar from "../Navbar/Navbar"
-import SubmitForm from "../Forms/SubmitForm"
+import Navbar from "./Navbar"
+import SubmitForm from "./Forms/SubmitForm"
 
 const HeaderMenu = ()=>{
   return (

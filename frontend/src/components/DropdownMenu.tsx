@@ -1,7 +1,7 @@
 import {useState} from "react"
 
-import DeleteButton from '../Buttons/DeleteButton'
-import DownloadButton from "../Buttons/DownloadButton"
+import DeleteButton from './Buttons/DeleteButton'
+import DownloadButton from "./Buttons/DownloadButton"
 
 const DropdownMenu = (props: any)=>{
   const [open, setOpen] = useState(false)

@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom"
 
-import DropdownMenu from "../DropdownMenu/DropdownMenu"
+import DropdownMenu from "./DropdownMenu"
 
 const Directory = (props: any)=>{
   return (
