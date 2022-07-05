@@ -2,7 +2,6 @@ import {useState} from "react"
 import {useNavigate, useParams} from "react-router-dom"
 
 import api from "./api/api"
-import isExits from "./isExists"
 import Warning from "./Warning"
 
 const MakeDirectory = ()=>{
@@ -35,7 +34,7 @@ const MakeDirectory = ()=>{
     if (!name){
       handleAddChild("Name is undefined")
     } else {
-      if (isExits(true, name)){
+      if (localStorage.getItem("directories")?.includes(name)){
         handleAddChild("Directory is exists")
       } else {
         createDir()

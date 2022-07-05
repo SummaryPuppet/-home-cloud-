@@ -5,7 +5,7 @@ import SubmitForm from "./Forms/SubmitForm"
 
 const HeaderMenu = ()=>{
   return (
-    <header className="flex flex-row mb-4 gap-2 bg-gray-100 items-center dark:bg-gray-900" >
+    <header className="flex sm:flex-col xl:flex-row mb-4 gap-2 bg-gray-100 items-center dark:bg-gray-900" >
       <Navbar/>
       <OpenModal 
         buttonName="Submit"

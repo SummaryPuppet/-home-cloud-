@@ -3,7 +3,6 @@ import {useNavigate, useParams} from 'react-router-dom';
 
 import Warning from '../Warning';
 
-import isExits from '../isExists';
 import api from '../api/api'
 
 type FormElement = React.FormEvent<HTMLFormElement>
@@ -36,7 +35,7 @@ const SubmitForm = ()=>{
     if (fileInput.current.value == ""){
       handleAddChild("Not files to submit") 
     } else {
-      if (isExits(false, fileInput.current.files[0].name)){
+      if (fileInput.current.files[0].name == localStorage.getItem("files")?.includes(fileInput.current.files[0].name)){
         handleAddChild("File already exist!!")
       } else {
         toBackend

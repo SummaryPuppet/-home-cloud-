@@ -14,10 +14,13 @@ const Directories = ()=>{
   const params = useParams()
 
   const getData = async(param: String)=>{
-    const request = await api.getApi(param) 
+    const {data} = await api.getApi(param) 
     
-    setDirectories(request.data.content.directories)
-    setFiles(request.data.content.files)
+    setDirectories(data.content.directories)
+    setFiles(data.content.files)
+
+    localStorage.setItem("directories", data.content.directories)
+    localStorage.setItem("files", data.content.files)
   }
 
   const isPath = ()=>{
@@ -33,10 +36,10 @@ const Directories = ()=>{
     isPath()
   }, [params])
 
-  const style = "text-lg px-20 py-2 border-2 border-gray-400 rounded-md mb-3 flex row-start-2 lg:flex-row dark:text-white dark:border-gray-500 dark:bg-gray-900"
+  const style = "text-center text-lg px-20 py-2 border-2 border-gray-400 rounded-md mb-3 flex row-start-2 lg:flex-row dark:text-white dark:border-gray-500 dark:bg-gray-900"
 
   return (
-    <main className="grid grid-cols-5 grid-rows-5 place-items-stretch gap-3" >
+    <main className="sm:flex sm:flex-col md:grid md:grid-cols-3 xl:grid xl:grid-cols-5 grid-rows-5 place-items-stretch gap-3" >
       <OpenModal 
         buttonName="Make Directory" 
         buttonStyle="mb-3 px-20 py-2 border-2 border-emerald-500 rounded-md text-2xl bg-emerald-500 xl:bg-transparent hover:bg-emerald-500 dark:text-white" 

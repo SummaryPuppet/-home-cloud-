@@ -2,7 +2,7 @@ import { useState } from 'react'
 import {useNavigate} from 'react-router-dom'
 
 const NavigatorForm = ()=>{
-  const [rute, setRute] = useState()
+  const [rute, setRute] = useState("")
   const navigate = useNavigate()
 
   const handleChange = (e: any) =>{
